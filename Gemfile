@@ -8,11 +8,21 @@ ruby '2.0.0'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 gem 'resque'
 gem 'redis'
-gem 'foreman'
 gem 'resque-web', require: 'resque_web'
+
+group :development do
+  gem 'sqlite3'
+  gem 'foreman'
+end
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -51,3 +61,5 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
