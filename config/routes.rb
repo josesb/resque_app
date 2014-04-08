@@ -1,6 +1,7 @@
-require 'resque_web'
 
 ResqueApp::Application.routes.draw do
+  require 'resque_web'
+
   # get "background_job/index"
   root "background_job#index" # this line instead of get ...
 
