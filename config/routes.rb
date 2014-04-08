@@ -5,7 +5,7 @@ ResqueApp::Application.routes.draw do
   # get "background_job/index"
   root "background_job#index" # this line instead of get ...
 
-  ResqueWeb::Engine.eager load!
+  #ResqueWeb::Engine.eager load!
   mount ResqueWeb::Engine => "/resque_web"
 
 
